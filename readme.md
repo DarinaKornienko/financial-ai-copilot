@@ -12,9 +12,16 @@ It is designed to act as an autonomous research assistant, capable of handling a
 * **Private Companies & Macro Trends:** Conducts live web searches to investigate startups, unlisted companies, and broader economic shifts (e.g., *"What are the latest funding rounds for Stripe?"* or *"Why is the tech sector down today?"*).
 * **Stateful Conversations:** Utilizes memory to track context for seamless follow-up questions (e.g., *"Actually, compare that last stock to Google instead."*).
 * **Objective Re-framing:** Bypasses standard AI refusals; if asked for direct investment advice, the agent automatically pivots to provide a data-driven risk/reward assessment based on current market conditions.
-  
-## Core Features
 
+#### Live Demo
+Test drive the application directly in your browser:  
+**[Launch the Financial AI Copilot](https://financial-ai-copilot-m9cwtbv7ziupmvcvxqxrcn.streamlit.app/)**
+
+This project utilizes a fully decoupled, cloud-hosted microservice architecture:
+* **The Backend (API & Agent):** Containerized via Docker and securely hosted on **Hugging Face Spaces** to handle heavy AI routing and data retrieval.
+* **The Frontend (UI):** Hosted natively on **Streamlit Community Cloud** for a lightning-fast, interactive user experience.
+  
+## Core features
 *   **Intelligent Tool Routing:** Automatically determines whether to query live stock data (for public companies) or perform live web searches (for private companies and macro trends).
 *   **Dynamic RAG Pipeline:** Fetches, embeds, and vectorizes recent financial news on-the-fly when queried about specific public tickers, storing them locally for high-speed retrieval.
 *   **Long-Term Memory:** Utilizes LangGraph's checkpointer to maintain conversational context across long user sessions.

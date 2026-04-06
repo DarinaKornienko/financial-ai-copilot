@@ -1,27 +1,23 @@
-
-
 services:
-  # --- Container 1: The Backend ---
+  
   backend-api:
     build: 
       context: .
       dockerfile: api.Dockerfile
     ports:
-      - "8000:8000" # Connects your Windows port 8000 to the container's port 8000
+      - "8000:8000" 
     volumes:
-      - ./qdrant_db:/app/qdrant_db # Plugs your local database folder into the container!
+      - ./qdrant_db:/app/qdrant_db
     env_file:
-      - .env # Automatically securely loads your Groq and LangSmith keys
+      - .env 
 
-  # --- Container 2: The Frontend ---
   frontend-ui:
     build:
       context: .
       dockerfile: ui.Dockerfile
     ports:
-      - "8501:8501" # Connects your Windows port 8501 to the Streamlit port
+      - "8501:8501" 
     environment:
-      # Tells the UI how to find the API on the private Docker network
       - API_URL=http://backend-api:8000/analyze
     depends_on:
-      - backend-api # Tells Docker: "Don't turn on the UI until the API is fully awake"
+      - backend-api 
