@@ -1,0 +1,28 @@
+# --- AI Brain & Agent Framework ---
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langgraph
+
+# --- RAG & Vector Database ---
+qdrant-client
+sentence-transformers
+
+# --- External Tools ---
+yfinance
+ddgs
+
+# --- Backend API ---
+fastapi
+uvicorn
+pydantic
+
+# --- Frontend UI ---
+streamlit
+requests
+
+# --- LLMOps & Observability ---
+python-dotenv
+langsmith
+pandas
