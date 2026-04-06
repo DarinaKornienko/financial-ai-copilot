@@ -103,7 +103,7 @@ Prerequisites:
 
 1. Clone the Repository
 ```
-git clone [git remote add origin https://github.com/DarinaKornienko/financial-ai-copilot.git](git remote add origin https://github.com/DarinaKornienko/financial-ai-copilot.git)
+git clone https://github.com/DarinaKornienko/financial-ai-copilot.git
 cd financial-ai-copilot
 ```
 2. Configure Environment Variables
